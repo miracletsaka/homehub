@@ -111,6 +111,48 @@ export default function ProductDetailPage() {
                   </div>
                 )}
               </div>
+               {product.supportingImages && product.supportingImages.length > 0 && (
+                <div className="grid grid-cols-4 gap-3">
+                  {/* Main product image thumbnail */}
+                  <button
+                    onClick={() => setSelectedImage(product.image)}
+                    className={`relative h-20 bg-slate-100 rounded-lg overflow-hidden border-2 transition-all ${
+                      selectedImage === product.image || !selectedImage
+                        ? "border-amber-900 ring-2 ring-amber-900 ring-offset-2"
+                        : "border-slate-200 hover:border-amber-900"
+                    }`}
+                  >
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} - Main`}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+
+                  {/* Supporting images thumbnails */}
+                  {product.supportingImages.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(img.url)}
+                      className={`relative h-20 bg-slate-100 rounded-lg overflow-hidden border-2 transition-all ${
+                        selectedImage === img.url
+                          ? "border-amber-900 ring-2 ring-amber-900 ring-offset-2"
+                          : "border-slate-200 hover:border-amber-900"
+                      }`}
+                      title={img.caption || img.alt}
+                    >
+                      <Image
+                        src={img.url}
+                        alt={img.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+
             </div>
 
             {/* Details Section */}
@@ -365,7 +407,7 @@ export default function ProductDetailPage() {
               </div>
             </div>
           )}
-
+        
           <CustomCtaSection />
 
           {/* Related Products */}

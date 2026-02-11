@@ -71,7 +71,7 @@ export function ProductsSidebar({
               <button
                 key={cat.slug}
                 onClick={() => {
-                  onCategoryChange(cat.slug);
+                  onCategoryChange(cat.slug as string);
                   setIsOpen(false);
                 }}
                 className={`w-full text-left px-4 py-2 rounded-lg transition-all ${

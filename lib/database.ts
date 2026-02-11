@@ -17,6 +17,11 @@ export interface Product {
   reviews?: number;
   badge?: string;
   inStock: boolean;
+  supportingImages?: {
+    url: string;
+    alt: string;
+    caption: string;
+  }[];
 }
 
 export interface Category {
@@ -46,6 +51,19 @@ export const allProducts: Product[] = [
     inStock: true,
     featured: true,
     dimensions: "Length: 3.1m | Short end: 1.7m | Long end: 2.2m",
+    supportingImages: [
+      {
+        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/WhatsApp%20Image%202026-02-06%20at%2010.19.13.jpeg",
+        alt: "Luxury U-Shape Corner Sofa - Front angle view",
+        caption: "Front view showing elegant design",
+      },
+      {
+        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/WhatsApp%20Image%202026-02-06%20at%2010.19.12.jpeg",
+        alt: "Luxury U-Shape Corner Sofa - Detail view of cushions",
+        caption: "Premium deep cushioning detail",
+      },
+      
+    ],
   },
   // Crimson Affair Collection
   {

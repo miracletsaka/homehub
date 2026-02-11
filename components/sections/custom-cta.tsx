@@ -1,4 +1,9 @@
+"use client"
+
+import { getAllProducts } from "@/lib/database";
 import { Check, Ruler, Sofa, Clock, Truck } from "lucide-react";
+import Image from "next/image";
+import { useState } from "react";
 
 const flagshipFeatures = [
   {
@@ -26,6 +31,15 @@ const specifications = [
 ];
 
 export function CustomCtaSection() {
+
+  const [selectedImage, setSelectedImage] = useState<string>('flagship.jpeg')
+
+  const allProductsData = getAllProducts();
+    
+  const product = allProductsData.find(
+    (p) => String(p.id) === "flagship-1" || p.id ==="flagship-1"
+  );
+
   return (
     <section
       id="flagship"
@@ -54,7 +68,7 @@ export function CustomCtaSection() {
               The statement piece that instantly upgrades any living room
             </p>
 
-            <p className="text-lg mb-8 opacity-90 leading-relaxed">
+            <p className="text-sm text-white mb-8 opacity-90 leading-relaxed">
               Designed for modern homes that want space, comfort, and serious
               style — all in one. With clean lines, deep seating, and premium
               finishing, it's the perfect centrepiece for family movie nights,
@@ -63,7 +77,7 @@ export function CustomCtaSection() {
 
             {/* Size & Specifications */}
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-6">
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <h3 className="text-white text-sm text-white font-semibold mb-4 flex items-center gap-2">
                 <Ruler className="w-5 h-5 text-amber-300" />
                 Dimensions
               </h3>
@@ -81,14 +95,14 @@ export function CustomCtaSection() {
 
             {/* Features List */}
             <div className="mb-8">
-              <h3 className="text-lg font-semibold mb-4">
+              <h3 className="text-sm underline text-white font-semibold mb-4">
                 Why customers love it:
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-1">
                 {flagshipFeatures.map((feature, index) => {
                   const IconComponent = feature.icon;
                   return (
-                    <li key={index} className="flex items-start gap-3">
+                    <li key={index} className="flex text-[11px] items-start gap-3">
                       <IconComponent className="w-5 h-5 text-amber-300 flex-shrink-0 mt-0.5" />
                       <span>{feature.text}</span>
                     </li>
@@ -130,7 +144,7 @@ export function CustomCtaSection() {
                   <span className="text-3xl font-bold text-amber-300">
                     MWK 850,000
                   </span>
-                  <span className="text-lg line-through opacity-60">
+                  <span className="text-sm text-white line-through opacity-60">
                     MWK 1,200,000
                   </span>
                 </div>
@@ -161,12 +175,12 @@ export function CustomCtaSection() {
           </div>
 
           {/* Right Visual - Product Image */}
-          <div className="hidden lg:block">
+          <div className="">
             <div className="relative">
               {/* Main Product Image */}
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-5">
                 <img
-                  src="/flagship.jpeg"
+                  src={selectedImage}
                   alt="Luxury U-Shape Corner Sofa"
                   className="w-full h-auto"
                 />
@@ -186,6 +200,48 @@ export function CustomCtaSection() {
                 <div className="text-sm font-bold">✓ In Stock</div>
                 <div className="text-xs">Ready to Build</div>
               </div>
+                {product?.supportingImages && product.supportingImages.length > 0 && (
+                <div className="grid grid-cols-4 gap-3">
+                  {/* Main product image thumbnail */}
+                  <button
+                    onClick={() => setSelectedImage(product.image)}
+                    className={`relative h-20 bg-slate-100 rounded-lg overflow-hidden border-2 transition-all ${
+                      selectedImage === product.image || !selectedImage
+                        ? "border-amber-900 ring-2 ring-amber-900 ring-offset-2"
+                        : "border-slate-200 hover:border-amber-900"
+                    }`}
+                  >
+                    <Image
+                      src={product.image}
+                      alt={`${product.name} - Main`}
+                      fill
+                      className="object-cover"
+                    />
+                  </button>
+
+                  {/* Supporting images thumbnails */}
+                  {product.supportingImages.map((img, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImage(img.url)}
+                      className={`relative h-20 bg-slate-100 rounded-lg overflow-hidden border-2 transition-all ${
+                        selectedImage === img.url
+                          ? "border-amber-900 ring-2 ring-amber-900 ring-offset-2"
+                          : "border-slate-200 hover:border-amber-900"
+                      }`}
+                      title={img.caption || img.alt}
+                    >
+                      <Image
+                        src={img.url}
+                        alt={img.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
+
             </div>
           </div>
         </div>
