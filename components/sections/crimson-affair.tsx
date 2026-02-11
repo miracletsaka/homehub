@@ -3,62 +3,13 @@
 import Link from "next/link";
 import { ArrowRight, Tag } from "lucide-react";
 import { ProductCard } from "@/components/product-card";
+import { getAllProducts } from "@/lib/database";
 
 export function CrimsonAffairSection() {
-  const products = [
-    {
-      id: "crimson-1",
-      name: "Dining Sets",
-      category: "Dining Room",
-      price: 16999,
-      originalPrice: 28999,
-      discount: 40,
-      image:
-        "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=400&h=300&fit=crop",
-      rating: 4.8,
-      reviews: 45,
-      badge: "Sale",
-    },
-    {
-      id: "crimson-2",
-      name: "Storage Beds",
-      category: "Bedroom",
-      price: 6999,
-      originalPrice: 12999,
-      discount: 45,
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&h=300&fit=crop",
-      rating: 4.6,
-      reviews: 32,
-      badge: "Sale",
-    },
-    {
-      id: "crimson-3",
-      name: "Shoe Racks",
-      category: "Storage",
-      price: 2999,
-      originalPrice: 5999,
-      discount: 50,
-      image:
-        "https://images.unsplash.com/photo-1595518892051-a120a6471a90?w=400&h=300&fit=crop",
-      rating: 4.5,
-      reviews: 28,
-      badge: "Sale",
-    },
-    {
-      id: "crimson-4",
-      name: "Lounge Chairs",
-      category: "Living Room",
-      price: 6499,
-      originalPrice: 10999,
-      discount: 40,
-      image:
-        "https://images.unsplash.com/photo-1592078615290-033ee584e267?w=400&h=300&fit=crop",
-      rating: 4.7,
-      reviews: 38,
-      badge: "Sale",
-    },
-  ];
+   const allProducts = getAllProducts();
+  const products = allProducts.filter(p => 
+    String(p.id).startsWith('crimson-')
+  ).slice(0, 4);
 
   return (
     <section className="bg-white">
@@ -109,13 +60,13 @@ export function CrimsonAffairSection() {
           <div className="lg:col-span-2">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
               {products.map((product, index) => (
-                <div
+                <Link href={`/products?category=${product.category}`}
                   key={product.id}
                   className="animate-in fade-in slide-in-from-bottom-8 duration-500"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <ProductCard product={product} />
-                </div>
+                </Link>
               ))}
             </div>
 

@@ -2,49 +2,14 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const newArrivals = [
-  {
-    id: 1,
-    name: "Minimalist Gray Sofa",
-    category: "Sitting Room",
-    price: "₹18,999",
-    description: "Blantyre's finest custom-built furniture for your living space",
-    tag: "NEW",
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1200&h=600&fit=crop",
-  },
-  {
-    id: 2,
-    name: "Walnut Dining Set",
-    category: "Dining Room",
-    price: "₹24,999",
-    description: "Premium handcrafted dining furniture made to last",
-    tag: "TRENDING",
-    image: "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1200&h=600&fit=crop",
-  },
-  {
-    id: 3,
-    name: "Modern Storage Bed",
-    category: "Bedroom",
-    price: "₹15,999",
-    description: "Luxury bedroom furniture with modern design elements",
-    tag: "NEW",
-    image: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&h=600&fit=crop",
-  },
-  {
-    id: 4,
-    name: "Premium Kitchen Island",
-    category: "Kitchen",
-    price: "₹32,999",
-    description: "Custom-built kitchen solutions for your home",
-    tag: "EXCLUSIVE",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&h=600&fit=crop",
-  },
-];
+import { getNewArrivals } from "@/lib/database";
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [autoPlay, setAutoPlay] = useState(true);
+
+  const newArrivals = getNewArrivals(4);
+
 
   useEffect(() => {
     if (!autoPlay) return;
@@ -110,7 +75,7 @@ export function HeroSection() {
                 }`}
               >
                 <span className="inline-block px-4 py-2 bg-amber-600 rounded-full text-xs font-bold tracking-widest uppercase text-white mb-4">
-                  {slide.tag}
+                  {slide.rating}
                 </span>
 
                 <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
@@ -119,7 +84,7 @@ export function HeroSection() {
                   <span className="text-amber-400">{slide.category}</span>
                 </h1>
 
-                <p className="text-lg text-gray-100 leading-relaxed mb-4 max-w-xl">
+                <p className="text-lg line-clamp-2 text-gray-100 leading-relaxed mb-4 max-w-xl">
                   {slide.description}
                 </p>
 
@@ -129,7 +94,7 @@ export function HeroSection() {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href={`#product-${slide.id}`}
+                    href={`/products/${slide.id}`}
                     className="inline-block px-8 py-3 bg-amber-600 text-white font-semibold rounded hover:bg-amber-700 transition-colors text-center"
                   >
                     View Details

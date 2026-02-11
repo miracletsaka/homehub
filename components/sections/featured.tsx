@@ -1,7 +1,12 @@
-import { productsData } from "@/lib/products-data";
+"use client";
+
 import { ProductCard } from "@/components/product-card";
+import { getFeaturedProducts } from "@/lib/database";
+import Link from "next/link";
 
 export function FeaturedSection() {
+  const featuredProducts = getFeaturedProducts(6);
+
   return (
     <section className="py-20 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -17,7 +22,7 @@ export function FeaturedSection() {
           </div>
 
           <a
-            href="#"
+            href="#catalogue"
             className="text-sm font-medium text-slate-700 hover:text-amber-900 transition-colors flex items-center gap-1"
           >
             View All →
@@ -26,14 +31,14 @@ export function FeaturedSection() {
 
         {/* Products Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productsData.featured.map((product, index) => (
-            <div
+          {featuredProducts.map((product, index) => (
+            <Link href={`/products/${product.id}`}
               key={product.id}
               className="animate-in fade-in slide-in-from-bottom-8 duration-500"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <ProductCard product={product} />
-            </div>
+            </Link>
           ))}
         </div>
       </div>

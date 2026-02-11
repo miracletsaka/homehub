@@ -145,10 +145,10 @@ export function Navbar() {
 
             {/* Additional Links */}
             <a
-              href="#custom"
+              href="#flagship"
               className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-amber-900 hover:bg-slate-50 rounded-lg transition-colors"
             >
-              Custom Orders
+              Flagship
             </a>
             <a
               href="#about"

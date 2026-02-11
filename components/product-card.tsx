@@ -8,8 +8,8 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const discount = product.oldPrice
-    ? calculateDiscount(product.oldPrice, product.price)
+  const discount = product.originalPrice
+    ? calculateDiscount(product.originalPrice, product.price)
     : null;
 
   return (
@@ -54,9 +54,9 @@ export function ProductCard({ product }: ProductCardProps) {
             <span className="text-xl font-bold text-amber-900">
               {formatCurrency(product.price)}
             </span>
-            {product.oldPrice && (
+            {product.originalPrice && (
               <span className="text-sm text-slate-400 line-through">
-                {formatCurrency(product.oldPrice)}
+                {formatCurrency(product.originalPrice)}
               </span>
             )}
           </div>

@@ -3,42 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { getAllCategories } from "@/lib/database";
 
 export function AstraCollectionSection() {
-  const categories = [
-    {
-      id: "living-room",
-      name: "Living Room",
-      description: "Sofas, Coffee Tables & More",
-      image:
-        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&h=400&fit=crop",
-      itemCount: "24 Items",
-    },
-    {
-      id: "dining-room",
-      name: "Dining Room",
-      description: "Tables, Chairs & Dining Sets",
-      image:
-        "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&h=400&fit=crop",
-      itemCount: "18 Items",
-    },
-    {
-      id: "bedroom",
-      name: "Bedroom",
-      description: "Beds, Wardrobes & Storage",
-      image:
-        "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&h=400&fit=crop",
-      itemCount: "32 Items",
-    },
-    {
-      id: "kitchen",
-      name: "Kitchen",
-      description: "Cabinets, Islands & Storage",
-      image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=500&h=400&fit=crop",
-      itemCount: "15 Items",
-    },
-  ];
+  const categories = getAllCategories().slice(0, 4);
 
   return (
     <section id="catalogue" className=" bg-gradient-to-br from-slate-50 to-slate-100">
@@ -61,7 +29,7 @@ export function AstraCollectionSection() {
           {categories.map((category) => (
             <Link
               key={category.id}
-              href={`#${category.id}`}
+              href={`products?category=${category.id}`}
               className="group bg-white overflow-hidden shadow hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
             >
               {/* Image Container */}
@@ -78,7 +46,7 @@ export function AstraCollectionSection() {
                 {/* Item Count Badge */}
                 <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-full">
                   <span className="text-xs font-semibold text-amber-900">
-                    {category.itemCount}
+                    {category.count}
                   </span>
                 </div>
               </div>
@@ -140,7 +108,7 @@ export function AstraCollectionSection() {
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <Link
-            href="#all-products"
+            href="/products"
             className="inline-flex items-center gap-2 px-8 py-3 border-2 border-amber-900 text-amber-900 font-semibold rounded-lg hover:bg-amber-900 hover:text-white transition-colors"
           >
             View All Products

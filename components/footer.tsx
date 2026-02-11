@@ -68,7 +68,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-lg">Quick Links</h4>
             <ul className="space-y-2">
               {footerLinks.quick.map((link) => (
-                <li key={link.href}>
+                <li key={link.label}>
                   <a
                     href={link.href}
                     className="text-sm opacity-80 hover:text-amber-300 transition-colors"
@@ -84,8 +84,8 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-lg">Categories</h4>
             <ul className="space-y-2">
-              {footerLinks.categories.map((link) => (
-                <li key={link.href}>
+              {footerLinks.categories.map((link, index) => (
+                <li key={index}>
                   <a
                     href={link.href}
                     className="text-sm opacity-80 hover:text-amber-300 transition-colors"
