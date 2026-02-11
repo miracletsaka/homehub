@@ -407,10 +407,7 @@ export default function ProductDetailPage() {
               </div>
             </div>
           )}
-        
-          <CustomCtaSection />
-
-          {/* Related Products */}
+                {/* Related Products */}
           {relatedProducts.length > 0 && (
             <div className="mt-20 pt-12 border-t border-slate-200">
               <div className="flex items-center justify-between mb-8">
@@ -481,6 +478,7 @@ export default function ProductDetailPage() {
           )}
         </div>
       </main>
+      <CustomCtaSection />
       <Footer />
     </div>
   );

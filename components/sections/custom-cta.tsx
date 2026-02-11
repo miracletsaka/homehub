@@ -32,7 +32,7 @@ const specifications = [
 
 export function CustomCtaSection() {
 
-  const [selectedImage, setSelectedImage] = useState<string>('flagship.jpeg')
+  const [selectedImage, setSelectedImage] = useState<string>('/flagship.jpeg')
 
   const allProductsData = getAllProducts();
     
@@ -180,7 +180,7 @@ export function CustomCtaSection() {
               {/* Main Product Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-5">
                 <img
-                  src={selectedImage}
+                  src={selectedImage ?? "/flagship.jpeg"}
                   alt="Luxury U-Shape Corner Sofa"
                   className="w-full h-auto"
                 />
