@@ -8,6 +8,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Heart, Share2, ShoppingCart, Ruler, Clock, Truck, Star } from "lucide-react";
 import { getAllProducts, formatPrice, type Product } from "@/lib/database";
+import { CustomCtaSection } from "@/components/sections/custom-cta";
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -364,6 +365,8 @@ export default function ProductDetailPage() {
               </div>
             </div>
           )}
+
+          <CustomCtaSection />
 
           {/* Related Products */}
           {relatedProducts.length > 0 && (

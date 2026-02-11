@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { ProductsSidebar } from "@/components/products-sidebar";
 import { ProductsGrid } from "@/components/products-grid";
 import { getAllProducts } from "@/lib/database";
+import { CustomCtaSection } from "@/components/sections/custom-cta";
 
 function ProductsContent() {
   const searchParams = useSearchParams();
@@ -96,6 +97,7 @@ function ProductsContent() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-grow bg-slate-50">
+        <CustomCtaSection />
         <div className="container mx-auto px-4 py-12">
           {/* Header */}
           <div className="mb-8 animate-in fade-in slide-in-from-top-4 duration-500">

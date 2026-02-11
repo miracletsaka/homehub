@@ -9,6 +9,7 @@ const workSans = Work_Sans({ subsets: ["latin"], variable: "--font-work-sans" })
 
 export const metadata: Metadata = {
   title: "HomeHub Malawi - Premium Custom Furniture & Home Décor",
+  icons:['/h-f.png'],
   description:
     "Blantyre's finest custom-built furniture and modern home décor. Premium quality, fast turnaround, and free delivery within Blantyre.",
   keywords: [

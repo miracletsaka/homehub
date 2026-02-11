@@ -1,7 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/sections/hero";
-import { FeaturesSection } from "@/components/sections/features";
 import { DealsSection } from "@/components/sections/deals";
 import { CategoriesSection } from "@/components/sections/categories";
 import { FeaturedSection } from "@/components/sections/featured";
@@ -16,7 +15,7 @@ export default function Home() {
       <Navbar />
       <main className="bg-white">
         <HeroSection />
-        <FeaturesSection />
+        <CustomCtaSection />
         <DealsSection />
         <CrimsonAffairSection />
         <CategoriesSection />
