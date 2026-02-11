@@ -357,6 +357,114 @@ export const allProducts: Product[] = [
     reviews: 31,
     inStock: true,
   },
+  {
+    id: "garden-1",
+    name: "Premium Outdoor Lounge Set",
+    category: "Garden",
+    price: 720000,
+    originalPrice: 950000,
+    discount: 24,
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&h=600&fit=crop",
+    description:
+      "Turn your outdoor space into a luxury hangout. A premium outdoor lounge set built for comfort, style, and durability. Perfect for gardens, patios, poolside spaces, and modern outdoor living. Custom-built in Blantyre in 10–14 days. FREE delivery around Blantyre.",
+    rating: 4.9,
+    reviews: 61,
+    badge: "Outdoor",
+    inStock: true,
+    featured: true,
+    dimensions: "2-Seater + 2 Chairs + Table | Custom sizes available",
+    supportingImages: [
+      {
+        url: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?w=1200&fit=crop",
+        alt: "Outdoor lounge set - wide view",
+        caption: "Wide view for a modern outdoor setup",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&fit=crop",
+        alt: "Outdoor lounge seating - detail",
+        caption: "Comfort and clean finishing details",
+      },
+    ],
+  },
+
+  {
+    id: "garden-2",
+    name: "Solid Wood Garden Bench",
+    category: "Garden",
+    price: 280000,
+    originalPrice: 350000,
+    discount: 20,
+    image:
+      "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=600&fit=crop",
+    description:
+      "A timeless solid wood garden bench that instantly elevates your outdoor space. Great for gardens, walkways, balconies, and porches. Built strong with premium finishing and comfort-friendly seating height.",
+    rating: 4.8,
+    reviews: 44,
+    badge: "Bestseller",
+    inStock: true,
+    featured: false,
+    dimensions: "Length: 1.6m | Depth: 0.45m | Height: 0.85m",
+    supportingImages: [
+      {
+        url: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=1200&fit=crop",
+        alt: "Garden bench - outdoor scene",
+        caption: "Perfect placement for garden and patio",
+      },
+    ],
+  },
+
+  {
+    id: "garden-3",
+    name: "Modern Pergola Frame (Custom Build)",
+    category: "Garden",
+    price: 980000,
+    originalPrice: 1250000,
+    discount: 22,
+    image:
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=1200&h=600&fit=crop",
+    description:
+      "A modern pergola frame designed for premium outdoor spaces. Ideal for shade, outdoor dining areas, and luxury garden setups. Custom sizes, finishes, and add-ons available (privacy panels, lighting, roofing options).",
+    rating: 4.9,
+    reviews: 27,
+    badge: "Premium",
+    inStock: true,
+    featured: true,
+    dimensions: "Standard: 3m x 3m | Custom sizes available",
+    supportingImages: [
+      {
+        url: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?w=1200&fit=crop",
+        alt: "Pergola - wide outdoor view",
+        caption: "Clean modern lines for luxury outdoor living",
+      },
+    ],
+  },
+
+  {
+    id: "garden-4",
+    name: "Large Planter Box Set (2pcs)",
+    category: "Garden",
+    price: 160000,
+    originalPrice: 200000,
+    discount: 20,
+    image:
+      "https://images.unsplash.com/photo-1469796466635-455ede028aca?w=1200&h=600&fit=crop",
+    description:
+      "A premium planter box set for modern gardens and patios. Great for flowers, herbs, and decorative plants. Built to last with clean finishing and sturdy structure.",
+    rating: 4.7,
+    reviews: 38,
+    badge: "New",
+    inStock: true,
+    featured: false,
+    dimensions: "Each: 1.0m x 0.4m x 0.45m",
+    supportingImages: [
+      {
+        url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&fit=crop",
+        alt: "Planter boxes with plants",
+        caption: "Perfect for decorative plants and herbs",
+      },
+    ],
+  },
 ];
 
 // Categories Database
@@ -423,6 +531,15 @@ export const categories: Category[] = [
     image:
       "https://images.unsplash.com/photo-1595518892051-a120a6471a90?w=500&h=400&fit=crop",
     count: "20 Items",
+  },
+  {
+    id: "garden",
+    name: "Garden",
+    slug: "garden",
+    description: "Outdoor Furniture & Garden Décor",
+    image:
+      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=500&h=400&fit=crop",
+    count: "16 Items",
   },
 ];
 

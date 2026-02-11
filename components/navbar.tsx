@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Search, Menu, X, ChevronDown, Star } from "lucide-react";
 import Image from "next/image";
 import { getAllCategories, getAllProducts } from "@/lib/database";
+import { Button } from "./ui/button";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -100,9 +101,13 @@ export function Navbar() {
     setIsMobileDropdownOpen(isMobileDropdownOpen === categoryId ? null : categoryId);
   };
 
+  const navigation = (url:string) =>{
+    window.location.href = url
+  }
+
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-0">
         <div className="flex items-center justify-between py-4 gap-8">
           {/* Logo */}
           <Link href="/" className="flex items-baseline gap-1 flex-shrink-0">
@@ -153,27 +158,27 @@ export function Navbar() {
                     {/* Subcategories */}
                     <div className="py-2">
                       {category.subcategories.map((item) => (
-                        <Link
+                        <button
+                        onClick={()=>navigation(item.href)}
                           key={item.href}
-                          href={item.href}
                           className="flex items-center justify-between px-4 py-2.5 text-sm text-slate-700 hover:bg-amber-50 hover:text-amber-900 transition-colors"
                         >
                           <span>{item.name}</span>
                           <span className="text-xs text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
                             {item.count}
                           </span>
-                        </Link>
+                        </button>
                       ))}
                     </div>
 
                     {/* View All CTA */}
                     <div className="border-t border-slate-200 p-2">
-                      <Link
-                        href={`/products?category=${category.slug}`}
+                      <button
+                        onClick={()=>navigation(`/products?category=${category.slug}`)}
                         className="block w-full text-center px-4 py-2 bg-amber-900 text-white font-semibold rounded-lg hover:bg-amber-800 transition-colors text-sm"
                       >
                         Browse All {category.label}
-                      </Link>
+                      </button>
                     </div>
                   </div>
                 )}

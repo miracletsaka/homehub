@@ -8,6 +8,7 @@ import { ProductsSidebar } from "@/components/products-sidebar";
 import { ProductsGrid } from "@/components/products-grid";
 import { getAllProducts } from "@/lib/database";
 import { CustomCtaSection } from "@/components/sections/custom-cta";
+import { ProductsLoading } from "@/components/loading";
 
 function ProductsContent() {
   const searchParams = useSearchParams();
@@ -39,6 +40,7 @@ function ProductsContent() {
       bathroom: "Bathroom",
       office: "Office",
       storage: "Storage",
+      garden: "Garden",
     };
     return categoryMap[slug] || slug;
   }
@@ -145,7 +147,7 @@ function ProductsContent() {
 
 export default function ProductsPage() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<ProductsLoading />}>
       <ProductsContent />
     </Suspense>
   );
