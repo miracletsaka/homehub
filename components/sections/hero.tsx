@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { getNewArrivals } from "@/lib/database";
+import { formatPrice, getNewArrivals } from "@/lib/database";
 
 export function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -89,7 +89,7 @@ export function HeroSection() {
                 </p>
 
                 <p className="text-4xl font-bold text-amber-400 mb-8">
-                  {slide.price}
+                  {formatPrice(slide.price)}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">

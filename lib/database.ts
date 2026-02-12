@@ -39,8 +39,8 @@ export const allProducts: Product[] = [
     id: "flagship-1",
     name: "Luxury U-Shape Corner Sofa",
     category: "Sitting Room",
-    price: 850000,
-    originalPrice: 1200000,
+    price: 7600000,
+    originalPrice: 8000000,
     discount: 29,
     image:
       "/flagship.jpeg?w=1200&h=600&fit=crop",
@@ -66,51 +66,81 @@ export const allProducts: Product[] = [
     ],
   },
   // Crimson Affair Collection
-  {
-    id: "crimson-1",
-    name: "Premium Dining Sets",
-    category: "Dining Room",
-    price: 245000,
-    originalPrice: 410000,
-    discount: 40,
-    image:
-      "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=1200&h=600&fit=crop",
-    description: "Elegant wooden dining set for 6-8 people with premium finish",
-    rating: 4.8,
-    reviews: 45,
-    badge: "Sale",
+    {
+    id: "garden-1",
+    name: "Fiddle Leaf Fig (Minimalist White Pot + Saucer)",
+    category: "Garden",
+    price: 100000,
+    originalPrice: 100000,
+    discount: 0,
+    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-1.jpeg",
+    description:
+      "Bring effortless elegance into your space with this Fiddle Leaf Fig styled in a minimalist white ceramic pot with matching saucer. Finished with white decorative pebbles for a clean, modern look, this piece instantly elevates any room — perfect for living rooms, offices, bedrooms, or entryways. Simple, timeless, and luxurious, it’s the kind of décor that makes your home feel thoughtfully designed in seconds.",
+    rating: 4.9,
+    reviews: 21,
+    badge: "New",
     inStock: true,
+    featured: true,
+    dimensions: "Indoor décor piece | Pot + saucer included",
+    supportingImages: [
+      {
+        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-1.jpeg",
+        alt: "Fiddle Leaf Fig in white ceramic pot",
+        caption: "Minimalist plant décor with premium finish",
+      },
+    ],
   },
+
   {
-    id: "crimson-2",
-    name: "Storage Beds",
-    category: "Bedroom",
-    price: 99000,
-    originalPrice: 185000,
-    discount: 45,
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&h=600&fit=crop",
-    description: "Queen size storage bed with built-in drawers and headboard",
-    rating: 4.6,
-    reviews: 32,
-    badge: "Sale",
+    id: "garden-2",
+    name: "Luxury Solid-Wood Console Table",
+    category: "Garden",
+    price: 1100000,
+    originalPrice: 0,
+    discount: 0,
+    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-2.jpeg",
+    description:
+      "This luxury solid-wood console table is the perfect statement piece for an entryway, hallway, or behind-the-sofa styling. With its thick premium top, clean architectural legs, and rich natural wood grain, it instantly adds warmth and high-end character to any space. Designed for modern homes that love timeless elegance, it’s the ideal surface for décor, mirrors, candles, and everyday essentials — simple, bold, and effortlessly beautiful.",
+    rating: 5.0,
+    reviews: 14,
+    badge: "Premium",
     inStock: true,
+    featured: true,
+    dimensions: "Console table | Custom sizing available",
+    supportingImages: [
+      {
+        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-2.jpeg",
+        alt: "Luxury solid-wood console table",
+        caption: "Thick top + architectural legs for a premium look",
+      },
+    ],
   },
+
   {
-    id: "crimson-3",
-    name: "Wooden Shoe Racks",
-    category: "Storage",
-    price: 42000,
-    originalPrice: 85000,
-    discount: 50,
-    image:
-      "https://images.unsplash.com/photo-1595518892051-a120a6471a90?w=1200&h=600&fit=crop",
-    description: "Multi-tier wooden shoe storage rack with elegant design",
-    rating: 4.5,
-    reviews: 28,
-    badge: "Sale",
+    id: "garden-7",
+    name: "Organic-Shaped Statement Mirror (Wood-Toned Frame)",
+    category: "Garden",
+    price: 4500000,
+    originalPrice: 0,
+    discount: 0,
+    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-7.jpeg",
+    description:
+      "This organic-shaped statement mirror is designed to bring instant elegance and depth to any space. With its smooth, freeform silhouette and rich wood-toned frame, it adds a high-end designer feel while softening the room with natural curves. Perfect for entryways, bedrooms, or above a console table, it reflects light beautifully and turns any wall into a stylish focal point.",
+    rating: 4.9,
+    reviews: 17,
+    badge: "Designer",
     inStock: true,
+    featured: true,
+    dimensions: "Wall mirror | Organic freeform shape",
+    supportingImages: [
+      {
+        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-7.jpeg",
+        alt: "Organic-shaped statement mirror with wood-toned frame",
+        caption: "Freeform silhouette for a high-end designer look",
+      },
+    ],
   },
+
   {
     id: "crimson-4",
     name: "Modern Lounge Chairs",
@@ -389,7 +419,7 @@ export const allProducts: Product[] = [
   },
 
   {
-    id: "garden-2",
+    id: "garden-5",
     name: "Solid Wood Garden Bench",
     category: "Garden",
     price: 280000,
@@ -415,7 +445,7 @@ export const allProducts: Product[] = [
   },
 
   {
-    id: "garden-3",
+    id: "garden-7",
     name: "Modern Pergola Frame (Custom Build)",
     category: "Garden",
     price: 980000,
