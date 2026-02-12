@@ -65,32 +65,23 @@ export const allProducts: Product[] = [
       
     ],
   },
-  // Crimson Affair Collection
-    {
+  {
     id: "garden-1",
     name: "Fiddle Leaf Fig (Minimalist White Pot + Saucer)",
     category: "Garden",
     price: 100000,
-    originalPrice: 100000,
+    originalPrice: 0,
     discount: 0,
     image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-1.jpeg",
     description:
-      "Bring effortless elegance into your space with this Fiddle Leaf Fig styled in a minimalist white ceramic pot with matching saucer. Finished with white decorative pebbles for a clean, modern look, this piece instantly elevates any room — perfect for living rooms, offices, bedrooms, or entryways. Simple, timeless, and luxurious, it’s the kind of décor that makes your home feel thoughtfully designed in seconds.",
+      "Bring effortless elegance into your space with this Fiddle Leaf Fig styled in a minimalist white ceramic pot with matching saucer. Finished with white decorative pebbles for a clean, modern look, this piece instantly elevates any room — perfect for living rooms, offices, bedrooms, or entryways. Simple, timeless, and luxurious, it’s the kind of décor that makes your home feel thoughtfully designed in seconds. Limited availability.",
     rating: 4.9,
     reviews: 21,
-    badge: "New",
+    badge: "Limited",
     inStock: true,
     featured: true,
-    dimensions: "Indoor décor piece | Pot + saucer included",
-    supportingImages: [
-      {
-        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-1.jpeg",
-        alt: "Fiddle Leaf Fig in white ceramic pot",
-        caption: "Minimalist plant décor with premium finish",
-      },
-    ],
+    dimensions: "Indoor décor piece | Ceramic pot + saucer included",
   },
-
   {
     id: "garden-2",
     name: "Luxury Solid-Wood Console Table",
@@ -107,23 +98,16 @@ export const allProducts: Product[] = [
     inStock: true,
     featured: true,
     dimensions: "Console table | Custom sizing available",
-    supportingImages: [
-      {
-        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-2.jpeg",
-        alt: "Luxury solid-wood console table",
-        caption: "Thick top + architectural legs for a premium look",
-      },
-    ],
   },
 
   {
-    id: "garden-7",
+    id: "garden-3",
     name: "Organic-Shaped Statement Mirror (Wood-Toned Frame)",
     category: "Garden",
     price: 4500000,
     originalPrice: 0,
     discount: 0,
-    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-7.jpeg",
+    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-3.jpeg",
     description:
       "This organic-shaped statement mirror is designed to bring instant elegance and depth to any space. With its smooth, freeform silhouette and rich wood-toned frame, it adds a high-end designer feel while softening the room with natural curves. Perfect for entryways, bedrooms, or above a console table, it reflects light beautifully and turns any wall into a stylish focal point.",
     rating: 4.9,
@@ -132,13 +116,6 @@ export const allProducts: Product[] = [
     inStock: true,
     featured: true,
     dimensions: "Wall mirror | Organic freeform shape",
-    supportingImages: [
-      {
-        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-7.jpeg",
-        alt: "Organic-shaped statement mirror with wood-toned frame",
-        caption: "Freeform silhouette for a high-end designer look",
-      },
-    ],
   },
 
   {
