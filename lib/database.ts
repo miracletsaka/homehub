@@ -40,7 +40,7 @@ export const allProducts: Product[] = [
     name: "Luxury U-Shape Corner Sofa",
     category: "Sitting Room",
     price: 7600000,
-    originalPrice: 8000000,
+    originalPrice: 10857000,
     discount: 29,
     image:
       "/flagship.jpeg?w=1200&h=600&fit=crop",
@@ -70,7 +70,7 @@ export const allProducts: Product[] = [
     name: "Fiddle Leaf Fig (Minimalist White Pot + Saucer)",
     category: "Garden",
     price: 100000,
-    originalPrice: 0,
+    originalPrice:142857,
     discount: 0,
     image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-1.jpeg",
     description:
@@ -87,7 +87,7 @@ export const allProducts: Product[] = [
     name: "Luxury Solid-Wood Console Table",
     category: "Garden",
     price: 1100000,
-    originalPrice: 0,
+    originalPrice: 1571429,
     discount: 0,
     image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-2.jpeg",
     description:
@@ -105,7 +105,7 @@ export const allProducts: Product[] = [
     name: "Organic-Shaped Statement Mirror (Wood-Toned Frame)",
     category: "Garden",
     price: 4500000,
-    originalPrice: 0,
+    originalPrice: 6428571,
     discount: 0,
     image: "https://neuroflow.lon1.digitaloceanspaces.com/images/garden-3.jpeg",
     description:
