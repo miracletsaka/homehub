@@ -65,6 +65,32 @@ export const allProducts: Product[] = [
       
     ],
   },
+  // ✅ Sitting Room — TV Cabinet (1.7m)
+  {
+    id: "tv-cabinet-170",
+    name: "Luxury Hardwood TV Cabinet (Up to 1.7m)",
+    category: "Sitting Room",
+    price: 3600000,
+    originalPrice: 5142857, // ~30% off -> price is 70% of original
+    discount: 30,
+    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/tv-cabinet.jpeg",
+    description:
+      "This luxury hardwood TV cabinet is a clean, modern statement piece designed to elevate any living room instantly. Built from premium hardwood with 4 spacious drawers and high-quality smooth sliders, it offers the perfect balance of style and practical storage. Drawer interiors are finished with painted MDF for a neat, durable finish, while the exterior is professionally sealed with multiple coats of varnish, then finished in natural oil and beeswax for a rich colour, soft sheen, and long-lasting protection. Limited availability.",
+    rating: 4.9,
+    reviews: 18,
+    badge: "Premium",
+    inStock: true,
+    featured: true,
+    dimensions: "Length: up to 1.7m | 4 drawers | Smooth sliders",
+    supportingImages: [
+      {
+        url: "https://neuroflow.lon1.digitaloceanspaces.com/images/tv-cabinet.jpeg",
+        alt: "Luxury hardwood TV cabinet with 4 drawers",
+        caption: "Clean modern lines + premium hardwood finish",
+      },
+    ],
+  },
+
   {
     id: "garden-1",
     name: "Fiddle Leaf Fig (Minimalist White Pot + Saucer)",
@@ -116,6 +142,25 @@ export const allProducts: Product[] = [
     inStock: true,
     featured: true,
     dimensions: "Wall mirror | Organic freeform shape",
+  },
+    // ✅ Sitting Room — TV Cabinet (3m)
+  {
+    id: "tv-cabinet-300",
+    name: "Luxury Hardwood TV Cabinet (Up to 3m)",
+    category: "Sitting Room",
+    price: 5600000,
+    originalPrice: 8000000, // exactly 30% off -> 5.6m is 70% of 8m
+    discount: 30,
+    image: "https://neuroflow.lon1.digitaloceanspaces.com/images/tv-cabinet.jpeg",
+    description:
+      "A larger luxury hardwood TV cabinet designed for big living rooms and wide TV setups. Built from premium hardwood with 4 spacious drawers and smooth high-quality sliders for everyday use. Drawer interiors are finished with painted MDF for durability and a clean look, while the exterior is sealed with multiple coats of varnish and finished in natural oil and beeswax for a rich colour and long-lasting protection. Limited availability.",
+    rating: 4.9,
+    reviews: 11,
+    badge: "Premium",
+    inStock: true,
+    featured: true,
+    dimensions: "Length: up to 3.0m | 4 drawers | Smooth sliders",
+    
   },
 
   {
