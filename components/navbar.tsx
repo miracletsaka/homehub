@@ -112,7 +112,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-baseline gap-1 flex-shrink-0">
             <Image
-              src="/h-f.png"
+              src="/h-h.png"
               alt="HomeHub Malawi - Premium Furniture Store"
               width={60}
               height={30}
